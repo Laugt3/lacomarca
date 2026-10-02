@@ -1,0 +1,53 @@
+{
+  "calificacion": "4,8",
+  "resenas": "226",
+  "portada": [
+    "/img/s2.jpg",
+    "/img/s1.jpg",
+    "/img/pista.jpg",
+    "/img/s3.jpg"
+  ],
+  "salon_centro": {
+    "direccion": "Colonia 1219 · Centro",
+    "descripcion": "El formato ideal para cumpleaños y celebraciones íntimas, con discoteca propia.",
+    "fotos": [
+      "/img/s1.jpg",
+      "/img/s2.jpg"
+    ]
+  },
+  "salon_tc": {
+    "direccion": "Duvimioso Terra 1971 · Tres Cruces",
+    "descripcion": "El salón principal, para las grandes celebraciones, con pista LED incluida.",
+    "fotos": [
+      "/img/pista.jpg",
+      "/img/pista2.jpg"
+    ]
+  },
+  "salon_tc1": {
+    "direccion": "Duvimioso Terra 1971 · Tres Cruces",
+    "descripcion": "Un espacio propio en el primer piso, para festejos de hasta 50 personas.",
+    "fotos": [
+      "/img/s3.jpg"
+    ]
+  },
+  "foto_propuesta": "/img/s3.jpg",
+  "videos": [
+    "https://www.instagram.com/p/DdmWpprt290/",
+    "https://www.instagram.com/p/DdjlyW1xwJr/",
+    "https://www.instagram.com/p/Ddc7cJPNle5/"
+  ],
+  "preguntas": [
+    {
+      "pregunta": "¿Puedo traer mi propia decoración?",
+      "respuesta": ""
+    },
+    {
+      "pregunta": "¿Puedo traer bebidas alcohólicas?",
+      "respuesta": ""
+    },
+    {
+      "pregunta": "¿Puedo traer los postres o la torta?",
+      "respuesta": ""
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "salon_centro": {
+    "nombre": "Salón Centro",
+    "detalle": "Ideal para eventos íntimos · hasta 50 personas",
+    "precio_hora": 3900,
+    "capacidad": 50
+  },
+  "salon_tc": {
+    "nombre": "Salón Tres Cruces",
+    "detalle": "Pista LED incluida · hasta 150 personas",
+    "precio_hora": 6300,
+    "capacidad": 150
+  },
+  "salon_tc1": {
+    "nombre": "Salón 1er Piso Tres Cruces",
+    "detalle": "Hasta 50 personas",
+    "precio_hora": 3900,
+    "capacidad": 50
+  },
+  "menu_pizzetas": {
+    "nombre": "Pizzetas",
+    "detalle": "Variedad de pizzetas artesanales",
+    "precio_persona": 750
+  },
+  "menu_lunch": {
+    "nombre": "Lunch",
+    "detalle": "Bocados fríos y calientes",
+    "precio_persona": 950
+  },
+  "menu_parrilla": {
+    "nombre": "Parrilla completa",
+    "detalle": "Con mesa buffet de ensaladas",
+    "precio_persona": 1300
+  },
+  "menu_adolescentes": {
+    "nombre": "Menú adolescentes",
+    "detalle": "Snacks, bocados fritos y hamburguesas con fritas",
+    "precio_persona": 550
+  },
+  "agregados_pizzetas": {
+    "precio_persona": 180,
+    "tablas": "Tablas de fiambres y arrolladitos",
+    "chivitos": "Chivitos",
+    "chorizos": "Picada de chorizos"
+  },
+  "postre_unidad": 2700,
+  "extra_disco": {
+    "nombre": "Discoteca",
+    "precio": 10000
+  },
+  "extra_pista": {
+    "nombre": "Pista LED 4x3",
+    "detalle": "Solo Salón Centro",
+    "precio": 4500
+  },
+  "extra_globos": {
+    "nombre": "Decoración de globos",
+    "precio": 2500
+  },
+  "extra_fuegos": {
+    "nombre": "Fuegos fríos de entrada",
+    "precio": 3500
+  },
+  "extra_foto": {
+    "nombre": "Fotografía",
+    "precio": 11000
+  },
+  "extra_mural": {
+    "nombre": "+ Mural de firmas",
+    "detalle": "Opcional con fotografía",
+    "precio": 4500
+  },
+  "extra_film": {
+    "nombre": "Filmación",
+    "precio": 11000
+  },
+  "extra_civil": {
+    "nombre": "+ Registro civil / Exteriores",
+    "detalle": "Opcional con filmación",
+    "precio": 3500
+  },
+  "extra_cab1": {
+    "nombre": "Cabina de fotos",
+    "detalle": "1 hora",
+    "precio": 4500
+  },
+  "extra_cab2": {
+    "nombre": "Cabina de fotos",
+    "detalle": "2 horas",
+    "precio": 6500
+  },
+  "otros_extras": [],
+  "juego_living": 1300,
+  "catering_propio": {
+    "lena": 2500,
+    "mozo": 2500,
+    "canilla_persona": 160
+  },
+  "whatsapp": "59897421425"
+}
