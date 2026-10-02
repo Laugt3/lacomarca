@@ -1,0 +1,220 @@
+# Panel de La Comarca (Pages CMS · app.pagescms.org)
+# Edita content/sitio.json y content/precios.json. Las fotos se guardan en /img.
+# Estructura de solo dos niveles a propósito (Pages CMS falla con objetos anidados en JSON).
+media:
+  input: img
+  output: /img
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: sitio
+    label: Fotos, videos y preguntas
+    type: file
+    path: content/sitio.json
+    format: json
+    fields:
+      - name: calificacion
+        label: Calificación en Google (ej. 4,8)
+        type: string
+      - name: resenas
+        label: Cantidad de reseñas en Google
+        type: string
+      - name: portada
+        label: Fotos de la portada (van pasando solas arriba de todo)
+        type: image
+        list: true
+      - name: salon_centro
+        label: Salón Centro
+        type: object
+        fields:
+          - { name: fotos, label: Fotos del salón, type: image, list: true }
+          - { name: direccion, label: Dirección (texto chico arriba del nombre), type: string }
+          - { name: descripcion, label: Descripción, type: text }
+      - name: salon_tc
+        label: Salón Tres Cruces
+        type: object
+        fields:
+          - { name: fotos, label: Fotos del salón, type: image, list: true }
+          - { name: direccion, label: Dirección (texto chico arriba del nombre), type: string }
+          - { name: descripcion, label: Descripción, type: text }
+      - name: salon_tc1
+        label: Salón 1er Piso Tres Cruces
+        type: object
+        fields:
+          - { name: fotos, label: Fotos del salón, type: image, list: true }
+          - { name: direccion, label: Dirección (texto chico arriba del nombre), type: string }
+          - { name: descripcion, label: Descripción, type: text }
+      - name: foto_propuesta
+        label: Foto de la sección «Vos traés a los invitados»
+        type: image
+      - name: videos
+        label: Videos de Instagram (pegá el link de cada reel o publicación)
+        type: string
+        list: true
+      - name: preguntas
+        label: Preguntas frecuentes (solo se muestran las que tienen respuesta)
+        type: object
+        list:
+          collapsible:
+            summary: "{fields.pregunta}"
+        fields:
+          - { name: pregunta, label: Pregunta, type: string }
+          - { name: respuesta, label: Respuesta, type: text }
+
+  - name: precios
+    label: Precios de la calculadora
+    type: file
+    path: content/precios.json
+    format: json
+    fields:
+      - name: salon_centro
+        label: "Salón Centro · precio por hora"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio_hora, label: Precio por hora ($), type: number }
+          - { name: capacidad, label: Capacidad (personas), type: number }
+      - name: salon_tc
+        label: "Salón Tres Cruces · precio por hora"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio_hora, label: Precio por hora ($), type: number }
+          - { name: capacidad, label: Capacidad (personas), type: number }
+      - name: salon_tc1
+        label: "Salón 1er Piso Tres Cruces · precio por hora"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio_hora, label: Precio por hora ($), type: number }
+          - { name: capacidad, label: Capacidad (personas), type: number }
+      - name: menu_pizzetas
+        label: "Menú · Pizzetas"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio_persona, label: Precio por persona ($), type: number }
+      - name: menu_lunch
+        label: "Menú · Lunch"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio_persona, label: Precio por persona ($), type: number }
+      - name: menu_parrilla
+        label: "Menú · Parrilla completa"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio_persona, label: Precio por persona ($), type: number }
+      - name: menu_adolescentes
+        label: "Menú · Menú adolescentes"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio_persona, label: Precio por persona ($), type: number }
+      - name: agregados_pizzetas
+        label: Agregados del menú de pizzetas
+        type: object
+        fields:
+          - { name: precio_persona, label: Precio por persona de cada agregado ($), type: number }
+          - { name: tablas, label: Agregado 1, type: string }
+          - { name: chivitos, label: Agregado 2, type: string }
+          - { name: chorizos, label: Agregado 3, type: string }
+      - name: postre_unidad
+        label: Precio de cada postre ($)
+        type: number
+      - name: extra_disco
+        label: "Adicional · Discoteca"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_pista
+        label: "Adicional · Pista LED (solo Salón Centro)"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_globos
+        label: "Adicional · Decoración de globos"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_fuegos
+        label: "Adicional · Fuegos fríos"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_foto
+        label: "Adicional · Fotografía"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_mural
+        label: "Adicional · Mural de firmas (aparece si eligen fotografía)"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_film
+        label: "Adicional · Filmación"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_civil
+        label: "Adicional · Registro civil / Exteriores (aparece si eligen filmación)"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_cab1
+        label: "Adicional · Cabina de fotos 1 hora (no se ofrece en Salón Centro)"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: extra_cab2
+        label: "Adicional · Cabina de fotos 2 horas (no se ofrece en Salón Centro)"
+        type: object
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle, type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: otros_extras
+        label: Otros servicios adicionales (para sumar uno nuevo a la calculadora)
+        type: object
+        list:
+          collapsible:
+            summary: "{fields.nombre}"
+        fields:
+          - { name: nombre, label: Nombre, type: string }
+          - { name: detalle, label: Detalle (opcional), type: string }
+          - { name: precio, label: Precio ($), type: number }
+      - name: juego_living
+        label: Juego de living, cada uno para 10 personas ($)
+        type: number
+      - name: catering_propio
+        label: Catering propio
+        type: object
+        fields:
+          - { name: lena, label: Servicio de leña ($), type: number }
+          - { name: mozo, label: Mozo, cada uno ($), type: number }
+          - { name: canilla_persona, label: Canilla libre, por persona ($), type: number }
+      - name: whatsapp
+        label: WhatsApp que recibe los pedidos (con 598 y sin espacios)
+        type: string
