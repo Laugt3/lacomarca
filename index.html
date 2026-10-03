@@ -285,7 +285,7 @@ function initB(PR){
 /* reveal */
 (()=>{const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll(".rv").forEach(e=>io.observe(e))})();
 /* calculadora privada: solo con ?cotizar */
-(()=>{const U=new URLSearchParams(location.search);if(!U.has("cotizar"))return;
+(()=>{const U=new URLSearchParams(location.search);if(!U.has("cotizar")&&!/^\/presupuesto\/?$/.test(location.pathname))return;
  const Z=document.getElementById("cotizar");Z.style.display="block";document.getElementById("presupuesto").style.display="none";
  document.querySelectorAll("[data-cta]").forEach(a=>{a.href="#cotizar";a.textContent="Armá tu presupuesto"});
  document.body.classList.add("cz-on");const para=(U.get("para")||"").trim();
