@@ -1,19 +1,19 @@
 {
   "salon_centro": {
     "nombre": "Salón Centro",
-    "detalle": "Ideal para eventos íntimos · hasta 50 personas",
+    "detalle": "Capacidad hasta 50 personas",
     "precio_hora": 3900,
     "capacidad": 50
   },
   "salon_tc": {
     "nombre": "Salón Tres Cruces",
-    "detalle": "Pista LED incluida · hasta 150 personas",
+    "detalle": "Capacidad hasta 150 personas",
     "precio_hora": 6300,
     "capacidad": 150
   },
   "salon_tc1": {
     "nombre": "Salón 1er Piso Tres Cruces",
-    "detalle": "Hasta 50 personas",
+    "detalle": "Capacidad hasta 50 personas",
     "precio_hora": 3900,
     "capacidad": 50
   },
@@ -89,7 +89,6 @@
     "detalle": "2 horas",
     "precio": 6500
   },
-  "otros_extras": [],
   "juego_living": 1300,
   "catering_propio": {
     "lena": 2500,
