@@ -1,4 +1,5 @@
 {
+  "horas_max": 7,
   "salon_centro": {
     "nombre": "Salón Centro",
     "detalle": "Capacidad hasta 50 personas",
