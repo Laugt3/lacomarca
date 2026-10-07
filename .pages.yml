@@ -67,6 +67,9 @@ content:
     path: content/precios.json
     format: json
     fields:
+      - name: horas_max
+        label: Máximo de horas de fiesta en la calculadora (dejá 0 para que no haya límite)
+        type: number
       - name: salon_centro
         label: "Salón Centro · precio por hora"
         type: object

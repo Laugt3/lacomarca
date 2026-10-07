@@ -293,7 +293,7 @@ function initB(PR){
  setTimeout(()=>Z.scrollIntoView({behavior:"smooth"}),500);
  /* === Precios de La Comarca (pesos uruguayos): lo único que se edita === */
  const X=k=>PR["extra_"+k],M=k=>PR["menu_"+k],SA=k=>PR["salon_"+k],AP=PR.agregados_pizzetas,ex=(id,o)=>Object.assign({id,n:X(id).nombre,d:X(id).detalle||undefined,p:+X(id).precio},o||{});
- const P={wa:PR.whatsapp,maxH:Infinity,
+ const P={wa:PR.whatsapp,maxH:(+PR.horas_max>0?+PR.horas_max:Infinity),
   salones:Object.fromEntries(["centro","tc","tc1"].map(k=>[k,{n:SA(k).nombre,d:SA(k).detalle,h:+SA(k).precio_hora,max:+SA(k).capacidad}])),
   menus:["pizzetas","lunch","parrilla","adolescentes"].map(k=>({id:k,n:M(k).nombre,d:M(k).detalle,p:+M(k).precio_persona})),
   xpiz:["tablas","chivitos","chorizos"].map(k=>({id:k,n:AP[k]})),xpizP:+AP.precio_persona,postre:+PR.postre_unidad,
@@ -306,7 +306,7 @@ function initB(PR){
  function R(){const _y=scrollY;const sal=P.salones[S.sal];
   $("z-modo").replaceChildren(card("Servicio completo","Salón, menú y extras",null,S.modo==="completo",()=>{S.modo="completo";R()}),card("Catering propio","Traigo mi propio servicio",null,S.modo==="catering",()=>{S.modo="catering";R()}));
   $("z-salon").replaceChildren(...Object.entries(P.salones).map(([id,s])=>card(s.n,s.d,fmt(s.h)+" <small>por hora</small>",S.sal===id,()=>{S.sal=id;if(id!=="centro")S.ex.delete("pista");P.extras.forEach(x=>{if(x.no===id)S.ex.delete(x.id)});S.pers=Math.min(S.pers,P.salones[id].max);R()},0,1)));
-  $("z-cnt").replaceChildren(num("Invitados","Capacidad del salón: "+sal.max,S.pers,v=>S.pers=v,1,sal.max,5),num("Horas de fiesta","Horario a elección",S.horas,v=>S.horas=v,1,P.maxH,1));
+  $("z-cnt").replaceChildren(num("Invitados","Capacidad del salón: "+sal.max,S.pers,v=>S.pers=v,1,sal.max,5),num("Horas de fiesta",P.maxH<Infinity?"Hasta "+P.maxH+" horas":"Horario a elección",S.horas,v=>S.horas=v,1,P.maxH,1));
   $("z-pmenu").style.display=S.modo==="completo"?"":"none";$("z-pcat").style.display=S.modo==="catering"?"":"none";
   const mm=$("z-menus");mm.replaceChildren();const g=E("div","ch");P.menus.forEach(m=>{const on=m.id in S.menus;g.append(card(m.n,m.d,fmt(m.p)+" <small>por persona</small>",on,()=>{on?delete S.menus[m.id]:S.menus[m.id]=10;R()}))});mm.append(g);
   P.menus.forEach(m=>{if(!(m.id in S.menus))return;mm.append(num(m.n,"Cantidad de personas",S.menus[m.id],v=>S.menus[m.id]=v,1,300,5,1));
