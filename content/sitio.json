@@ -50,10 +50,12 @@
       "pregunta": "¿Puedo traer mi propia decoración?"
     },
     {
-      "pregunta": "¿Puedo traer bebidas alcohólicas?"
+      "pregunta": "¿Puedo traer bebidas alcohólicas?",
+      "respuesta": "Si, pueden traer su propias bebidas alcohólicas. Nosotros le suministramos el hielo. \n\nTambien contamos con cervecitas chopito Patricia y Corona.\n\nEl servicio es a consignación, por lo que al finalizar el evento se cuentan las cervezas consumidas y ustedes pagan únicamente las que se tomaron. También pueden establecer un tope máximo de consumo si lo desean.\n\n🍻 Nosotros les proporcionamos las cervezas, el copón y el hielo, garantizando que estén bien frías durante el evento.\n\nEl servicio es opcional. Si prefieren traer sus propias cervezas, no hay inconveniente: igualmente les proporcionamos el copón y el hielo."
     },
     {
-      "pregunta": "¿Puedo traer los postres o la torta?"
+      "pregunta": "¿Puedo traer los postres o la torta?",
+      "respuesta": "Si"
     }
   ]
 }
