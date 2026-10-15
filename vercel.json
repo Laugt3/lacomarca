@@ -1,3 +1,6 @@
 {
-  "rewrites": [{ "source": "/presupuesto", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/presupuesto", "destination": "/index.html" },
+    { "source": "/fotos", "destination": "/fotos.html" }
+  ]
 }
