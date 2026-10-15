@@ -47,7 +47,8 @@
   ],
   "preguntas": [
     {
-      "pregunta": "¿Puedo traer mi propia decoración?"
+      "pregunta": "¿Puedo traer mi propia decoración?",
+      "respuesta": "Todo lo que deseen traer de decoración, bienvenido sea."
     },
     {
       "pregunta": "¿Puedo traer bebidas alcohólicas?",
@@ -55,7 +56,7 @@
     },
     {
       "pregunta": "¿Puedo traer los postres o la torta?",
-      "respuesta": "Si"
+      "respuesta": "Si, pueden traer su propia Torta, Postres y Dulces"
     }
   ]
 }
