@@ -5,6 +5,9 @@ media:
   input: img
   output: /img
   extensions: [jpg, jpeg, png, webp]
+  # Pasa el nombre a minúsculas y sin espacios: sin esto las fotos del celular
+  # con extensión .JPG o .JPEG se rechazaban al subirlas ("Invalid extension").
+  rename: safe
 
 content:
   - name: sitio
